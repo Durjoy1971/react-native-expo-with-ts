@@ -8,12 +8,12 @@ import {
   ImageSourcePropType,
 } from "react-native";
 
-interface EmojiList {
+interface EmojiListProps {
   onSelect: (emoji: ImageSourcePropType | null) => void;
   onCloseModal: () => void;
 }
 
-export default function EmojiList({ onSelect, onCloseModal }: EmojiList) {
+export default function EmojiList({ onSelect, onCloseModal }: EmojiListProps) {
   const [emoji] = useState<ImageSourcePropType[]>([
     require("../assets/images/emoji1.png"),
     require("../assets/images/emoji2.png"),
